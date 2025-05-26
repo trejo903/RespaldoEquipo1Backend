@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { PerfilModule } from './perfil/perfil.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './config/typeorm.config';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { Perfil } from './perfil/entities/perfil.entity';
+import { ProfileModule } from './profile/profile.module';
+
 
 @Module({
   imports: [
@@ -16,7 +16,7 @@ import { Perfil } from './perfil/entities/perfil.entity';
       useFactory:typeOrmConfig,
       inject:[ConfigService]
     }),
-    PerfilModule
+    ProfileModule
   ],
   controllers: [AppController],
   providers: [AppService],
