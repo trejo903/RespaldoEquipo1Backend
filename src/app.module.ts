@@ -5,6 +5,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './config/typeorm.config';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ProfileModule } from './profile/profile.module';
+import { ProductsModule } from './products/products.module';
+import { TransactionsModule } from './transactions/transactions.module';
 
 
 @Module({
@@ -16,7 +18,9 @@ import { ProfileModule } from './profile/profile.module';
       useFactory:typeOrmConfig,
       inject:[ConfigService]
     }),
-    ProfileModule
+    ProfileModule,
+    ProductsModule,
+    TransactionsModule
   ],
   controllers: [AppController],
   providers: [AppService],
