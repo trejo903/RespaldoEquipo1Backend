@@ -16,7 +16,11 @@ export class ProfileService {
   }
 
   findAll() {
-    return this.profileRepository.find()
+    return this.profileRepository.find({
+      order:{
+        id:'DESC'
+      }
+    })
   }
 
   async findOne(id: number) {
