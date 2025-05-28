@@ -7,7 +7,6 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ProfileModule } from './profile/profile.module';
 import { ProductsModule } from './products/products.module';
 import { TransactionsModule } from './transactions/transactions.module';
-import { PruebaModule } from './prueba/prueba.module';
 
 
 @Module({
@@ -21,8 +20,7 @@ import { PruebaModule } from './prueba/prueba.module';
     }),
     ProfileModule,
     ProductsModule,
-    TransactionsModule,
-    PruebaModule
+    TransactionsModule
   ],
   controllers: [AppController],
   providers: [AppService],
