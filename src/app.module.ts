@@ -7,6 +7,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ProfileModule } from './profile/profile.module';
 import { ProductsModule } from './products/products.module';
 import { TransactionsModule } from './transactions/transactions.module';
+import { CreateAccountModule } from './create-account/create-account.module';
+import { EnviarCorreosService } from './enviar-correos/enviar-correos.service';
 
 
 @Module({
@@ -20,9 +22,10 @@ import { TransactionsModule } from './transactions/transactions.module';
     }),
     ProfileModule,
     ProductsModule,
-    TransactionsModule
+    TransactionsModule,
+    CreateAccountModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, EnviarCorreosService],
 })
 export class AppModule {}
