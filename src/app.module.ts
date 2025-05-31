@@ -9,6 +9,8 @@ import { ProductsModule } from './products/products.module';
 import { TransactionsModule } from './transactions/transactions.module';
 import { CreateAccountModule } from './create-account/create-account.module';
 import { EnviarCorreosService } from './enviar-correos/enviar-correos.service';
+import { LoginService } from './login/login.service';
+import { LoginModule } from './login/login.module';
 
 
 @Module({
@@ -23,9 +25,10 @@ import { EnviarCorreosService } from './enviar-correos/enviar-correos.service';
     ProfileModule,
     ProductsModule,
     TransactionsModule,
-    CreateAccountModule
+    CreateAccountModule,
+    LoginModule
   ],
   controllers: [AppController],
-  providers: [AppService, EnviarCorreosService],
+  providers: [AppService],
 })
 export class AppModule {}

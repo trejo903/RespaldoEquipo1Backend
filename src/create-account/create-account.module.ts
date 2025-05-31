@@ -8,6 +8,6 @@ import { EnviarCorreosService } from 'src/enviar-correos/enviar-correos.service'
 @Module({
   imports:[TypeOrmModule.forFeature([CreateAccount])],
   controllers: [CreateAccountController],
-  providers: [CreateAccountService,EnviarCorreosService],
+  providers: [CreateAccountService,EnviarCorreosService,TypeOrmModule],
 })
 export class CreateAccountModule {}

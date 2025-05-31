@@ -27,7 +27,7 @@ export class CreateAccountService {
       correo:createCreateAccountDto.correo,
       token
     })
-    return "Se ha enviado un codigo de verificacion, por favor de checar tu email";
+    return {message:"Se ha enviado un codigo de verificacion, por favor de checar tu email",ok:true}
   }
 
   findAll() {
@@ -56,7 +56,8 @@ export class CreateAccountService {
     await this.createAccountRepository.save(user)
     return {
       message:'Token confirmado correctamente',
-      id:user.id
+      id:user.id,
+      ok:true
     }
   }
   async completeName(id:number,completeNameAccountDto:CompleteNameDto){
@@ -69,7 +70,8 @@ export class CreateAccountService {
     await this.createAccountRepository.save(user)
     return {
       message:'Nombre y apellido completado correctamente',
-      id:user.id
+      id:user.id,
+      ok:true
     }
   }
   async completePassword(id:number,completePasswordAccountDto:CompletePasswordDto){
@@ -81,7 +83,8 @@ export class CreateAccountService {
     await this.createAccountRepository.save(user)
     return {
       message:'Registro completado correctamente',
-      id:user.id
+      id:user.id,
+      ok:true
     }
   }
 }
