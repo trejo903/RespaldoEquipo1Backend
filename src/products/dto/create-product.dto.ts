@@ -7,8 +7,6 @@ export class CreateProductDto {
     @IsNotEmpty({message:'La descripcion del producto es obligatorio'})
     @IsString({message:'Descripcion no valida'})
     descripcion:string
-    @IsNotEmpty({message:'La imagen del producto es obligatoria'})
-    imagen:string
     @IsNotEmpty({message:'La cantidad del producto es obligatoria'})
     @IsNumber({maxDecimalPlaces:0},{message:'Cantidad no valida'})
     inventario:number
