@@ -11,6 +11,8 @@ import { CreateAccountModule } from './create-account/create-account.module';
 import { EnviarCorreosService } from './enviar-correos/enviar-correos.service';
 import { LoginService } from './login/login.service';
 import { LoginModule } from './login/login.module';
+import { RoutesModule } from './routes/routes.module';
+import { XmlModule } from './xml/xml.module';
 
 
 @Module({
@@ -26,7 +28,9 @@ import { LoginModule } from './login/login.module';
     ProductsModule,
     TransactionsModule,
     CreateAccountModule,
-    LoginModule
+    LoginModule,
+    RoutesModule,
+    XmlModule
   ],
   controllers: [AppController],
   providers: [AppService],
